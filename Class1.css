@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,500&display=swap');
+body{
+   font-family: 'DM Sans', sans-serif;
+}
+.container {
+    max-width: 1140px;
+    margin: auto;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    height: 640px;
+    background-color: aqua;
+    animation-name: colorchange;
+    animation-duration: 5s;
+    animation-iteration-count: 5;
+    animation-timing-function: linear;
+    animation-fill-mode: none;
+}
+.box:nth-child(2) {
+    border: 3px solid rgb(77, 74, 74);
+    background-color: blueviolet;
+    padding: 20px;
+    transition: all 08s, ease in;
+    animation: moving 5s ease-in  infinite alternate forwards;
+
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+
+}
+    .box:hover{
+       transform: translateY(40px); 
+       background-color: rgb(255, 3, 255);
+       color: rgb(255, 254, 252);
+    }
+
+    @keyframes colorchange {
+        30% {background-color: red;}
+        70% {background-color: rgb(240, 237, 51);}
+        50% {background-color: rgb(95, 209, 19);}
+        77% {background-color: rgb(0, 60, 255);}
+        33% {background-color: rgb(247, 0, 255);}
+        
+    }
+
+    @keyframes moving{
+        form{
+            transform: rotateX(0)
+        }
+        to{
+            transform: rotateY(160deg)
+        }
+    }
